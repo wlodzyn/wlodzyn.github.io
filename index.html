@@ -1,1 +1,29 @@
-Hello World
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+</head>
+<body>
+    <h2>Conference Registration Form</h2>
+    <form action="send_email.php" method="post">
+        <label for="First name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+        
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+        
+        <label for="phone">Phone Number:</label><br>
+        <input type="tel" id="phone" name="phone" required><br><br>
+        
+        <label for="organization">Organization:</label><br>
+        <input type="text" id="organization" name="organization" required><br><br>
+        
+        <label for="attendees">Number of Attendees:</label><br>
+        <input type="number" id="attendees" name="attendees" required><br><br>
+        
+        <label for="comments">Comments:</label><br>
+        <textarea id="comments" name="comments"></textarea><br><br>
+        
+        <input type="submit" value="Register">
+    </form>
+</body> 
