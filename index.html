@@ -25,8 +25,8 @@
         <label for="Title">Title</label><br>
         <input type="text" id="entry.714867638" name="entry.714867638" required><br><br>
         <label for="file">Abstract</label><br>
-        <div id="data"></div>
-        <input name="file" id="uploadfile" type="file" accept=".pdf" required><br><br>
+        <!--<div id="data"></div>-->
+        <input name="file" id="uploadfile2" type="file" accept=".pdf" required><br><br>
         <input type="submit" value="Register">
     </form>
     
@@ -45,17 +45,17 @@
 
     <script>
     submitForms = function(){
-        var file = theInput.value.files[0];
-        var fr = new FileReader();
-        fr.fileName = file.name;
-        fr.onload = function(e) {
-                e.target.result
-                html = '<input type="hidden" name="data" value="' + e.target.result.replace(/^.*,/, '') + '" >';
-                html += '<input type="hidden" name="mimetype" value="' + e.target.result.match(/^.*(?=;)/)[0] + '" >';
-                html += '<input type="hidden" name="filename" value="' + e.target.fileName + '" >';
-                $("#data").empty().append(html);
-            }
-        fr.readAsDataURL(file);
+        //var file = theInput.value.files[0];
+        //var fr = new FileReader();
+        //fr.fileName = file.name;
+        //fr.onload = function(e) {
+         //       e.target.result
+         //       html = '<input type="hidden" name="data" value="' + e.target.result.replace(/^.*,/, '') + '" >';
+         //       html += '<input type="hidden" name="mimetype" value="' + e.target.result.match(/^.*(?=;)/)[0] + '" >';
+         //       html += '<input type="hidden" name="filename" value="' + e.target.fileName + '" >';
+         //      $("#data").empty().append(html);
+         //   }
+        //fr.readAsDataURL(file);
         document.getElementById("dform").submit();
     }
     </script>
@@ -95,7 +95,7 @@
     });
     </script>
 
-    <!--<script>
+    <script>
         $('#uploadfile').on("change", function() {
             var file = this.files[0];
             var fr = new FileReader();
@@ -109,7 +109,7 @@
             }
             fr.readAsDataURL(file);
         });
-    </script>-->
+    </script>
 
 </body> 
 
