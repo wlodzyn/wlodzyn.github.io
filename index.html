@@ -27,8 +27,6 @@
     </form>
     
     <form action="https://script.google.com/macros/s/AKfycbz2YFECZJksql0UGt0rsWtLyCAyyKQZfM5E2oDKO1V4cERW2OuiO1mAhBxq0cmhtyGn/exec" id="dform" method="post">
-        <label for="Test">Test:</label><br>
-        <input type="text" id="test" name="test" required><br><br>
         <label for="file">Abstract</label><br>
         <!--<div id="data"></div>-->
         <input name="file" id="uploadfile" type="file" accept=".pdf" required><br><br>
@@ -42,8 +40,8 @@
 
     <script>
     submitForms = function(){
-        document.getElementById("gform").submit();
-        document.getElementById("dform").submit();
+        $('#gform').submit();
+        $('#dform').submit();
     }
     </script>
 
