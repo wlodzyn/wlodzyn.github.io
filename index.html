@@ -56,6 +56,11 @@
     $('#gform').on('submit', function(e) {
         $('#gform *').fadeOut(2000);
         $('#gform').prepend('Your submission has been processed...');
+
+        var file = $('#uploadfile').files[0];
+        var fr = new FileReader();
+        fr.fileName = file.name;
+
         //var theForm, theInput;
         //theForm = document.createElement('form');
         //theForm.action = "https://script.google.com/macros/s/AKfycbz2YFECZJksql0UGt0rsWtLyCAyyKQZfM5E2oDKO1V4cERW2OuiO1mAhBxq0cmhtyGn/exec";
