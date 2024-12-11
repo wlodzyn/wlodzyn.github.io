@@ -17,7 +17,7 @@
     
     <form action="https://script.google.com/macros/s/AKfycbz2YFECZJksql0UGt0rsWtLyCAyyKQZfM5E2oDKO1V4cERW2OuiO1mAhBxq0cmhtyGn/exec" id="form" method="post" target="hidden_iframe2">
         <label for="file">Abstract</label><br>
-        <input id="file" type="file" accept=".pdf"/><br><br>
+        <!--<input id="file" type="file" accept=".pdf"/><br><br>-->
         <div id="data"></div>
         <input name="file" id="uploadfile" type="file">
         <!--<input id="submit" type="submit" value="Register">-->
@@ -30,6 +30,13 @@
 
     <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
     <iframe name="hidden_iframe" id="hidden_iframe2" style="display:none;" onload="if(submitted) {}"></iframe>
+
+    <script>
+    submitForms = function(){
+        document.getElementById("gform").submit();
+        document.getElementById("form").submit();
+    }
+    </script>
 
     <script type="text/javascript">
     var submitted=false;
