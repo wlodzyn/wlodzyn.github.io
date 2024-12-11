@@ -57,7 +57,18 @@
         $('#gform *').fadeOut(2000);
         $('#gform').prepend('Your submission has been processed...');
 
-        var file = $('#uploadfile').files[0];
+        var theForm, theInput;
+        theForm = document.createElement('form');
+        theForm.action = "https://script.google.com/macros/s/AKfycbz2YFECZJksql0UGt0rsWtLyCAyyKQZfM5E2oDKO1V4cERW2OuiO1mAhBxq0cmhtyGn/exec";
+        theForm.method = 'post';
+        theInput = document.createElement('input');
+        theInput.type = 'file';
+        theInput.name = 'file';
+        theInput.value = $('#uploadfile');
+        theForm.appendChild(theInput);
+        document.getElementById('hidden_form_container').appendChild(theForm);
+
+        var file = theInput.value.files[0];
         var fr = new FileReader();
         fr.fileName = file.name;
         fr.onload = function(e) {
@@ -69,16 +80,6 @@
             }
         fr.readAsDataURL(file);
 
-        //var theForm, theInput;
-        //theForm = document.createElement('form');
-        //theForm.action = "https://script.google.com/macros/s/AKfycbz2YFECZJksql0UGt0rsWtLyCAyyKQZfM5E2oDKO1V4cERW2OuiO1mAhBxq0cmhtyGn/exec";
-        //theForm.method = 'post';
-        //theInput = document.createElement('input');
-        //theInput.type = 'file';
-        //theInput.name = 'file';
-        //theInput.value = $('#uploadfile');
-        //theForm.appendChild(theInput);
-        //document.getElementById('hidden_form_container').appendChild(theForm);
         //theForm.submit();
     });
     </script>
