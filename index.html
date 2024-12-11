@@ -63,14 +63,14 @@
         theInput.name = 'file';
         theInput.value = $('#uploadfile');
         theForm.appendChild(theInput);
-        document.getElementById('hidden_form_container').appendChild(theForm);
-        theForm.submit();
+        //document.getElementById('hidden_form_container').appendChild(theForm);
+        //theForm.submit();
         $('#gform *').fadeOut(2000);
         $('#gform').prepend('Your submission has been processed...');
     });
     </script>
 
-    <!--<script>
+    <script>
         $('#uploadfile').on("change", function() {
             var file = this.files[0];
             var fr = new FileReader();
@@ -84,7 +84,7 @@
             }
             fr.readAsDataURL(file);
         });
-    </script>-->
+    </script>
 
 </body> 
 
