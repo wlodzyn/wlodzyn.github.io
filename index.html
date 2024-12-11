@@ -30,44 +30,21 @@
         <input type="submit" value="Register">
     </form>
     
-    <!--<form action="https://script.google.com/macros/s/AKfycbz2YFECZJksql0UGt0rsWtLyCAyyKQZfM5E2oDKO1V4cERW2OuiO1mAhBxq0cmhtyGn/exec" id="dform" method="post">
+    <form action="https://script.google.com/macros/s/AKfycbz2YFECZJksql0UGt0rsWtLyCAyyKQZfM5E2oDKO1V4cERW2OuiO1mAhBxq0cmhtyGn/exec" id="dform" method="post">
         <label for="file">Abstract</label><br>
         <div id="data"></div>
         <input name="file" id="uploadfile" type="file" accept=".pdf" required><br><br>
-    </form>-->
+    </form>
 
-    <!--<input type="button" value="Register" onclick="submitForms()" />-->
+    <input type="button" value="Register" onclick="submitForms()" />
 
     <!--<script src="assets/js/jquery.min.js"></script>-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
 
     <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
 
-    <!--<script>
+    <script>
     submitForms = function(){
-        document.getElementById("gform").submit();
-        document.getElementById("dform").submit();
-    }
-    </script>-->
-
-    <script type="text/javascript"> var submitted=false; </script>
-    
-    <script type="text/javascript">
-    $('#gform').on('submit', function(e) {
-        $('#gform *').fadeOut(2000);
-        //$('#gform').prepend('Your submission has been processed...');
-
-        var theForm, theInput;
-        theForm = document.createElement('form');
-        theForm.action = "https://script.google.com/macros/s/AKfycbz2YFECZJksql0UGt0rsWtLyCAyyKQZfM5E2oDKO1V4cERW2OuiO1mAhBxq0cmhtyGn/exec";
-        theForm.method = 'post';
-        theInput = document.createElement('input');
-        theInput.type = 'file';
-        theInput.name = 'file';
-        theInput.value = $('#uploadfile');
-        theForm.appendChild(theInput);
-        document.getElementById('hidden_form_container').appendChild(theForm);
-
         var file = theInput.value.files[0];
         var fr = new FileReader();
         fr.fileName = file.name;
@@ -79,8 +56,42 @@
                 $("#data").empty().append(html);
             }
         fr.readAsDataURL(file);
+        document.getElementById("dform").submit();
+    }
+    </script>
 
-        theForm.submit();
+    <script type="text/javascript"> var submitted=false; </script>
+    
+    <script type="text/javascript">
+    $('#gform').on('submit', function(e) {
+        $('#gform *').fadeOut(2000);
+        //$('#gform').prepend('Your submission has been processed...');
+
+        //var theForm, theInput;
+        //theForm = document.createElement('form');
+        //theForm.action = "https://script.google.com/macros/s/AKfycbz2YFECZJksql0UGt0rsWtLyCAyyKQZfM5E2oDKO1V4cERW2OuiO1mAhBxq0cmhtyGn/exec";
+        //theForm.method = 'post';
+        //theInput = document.createElement('input');
+        //theInput.type = 'file';
+        //theInput.name = 'file';
+        //theInput.value = $('#uploadfile');
+        //theForm.appendChild(theInput);
+        //document.getElementById('hidden_form_container').appendChild(theForm);
+
+        //var file = theInput.value.files[0];
+        //var fr = new FileReader();
+        //fr.fileName = file.name;
+        //fr.onload = function(e) {
+         //       e.target.result
+         //       html = '<input type="hidden" name="data" value="' + e.target.result.replace(/^.*,/, '') + '" >';
+         //       html += '<input type="hidden" name="mimetype" value="' + e.target.result.match(/^.*(?=;)/)[0] + '" >';
+         //       html += '<input type="hidden" name="filename" value="' + e.target.fileName + '" >';
+         //       $("#data").empty().append(html);
+         //   }
+        //fr.readAsDataURL(file);
+
+        //theForm.submit();
+        //document.getElementById("dform").submit();
     });
     </script>
 
