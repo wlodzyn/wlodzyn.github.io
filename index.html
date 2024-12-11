@@ -49,7 +49,6 @@
 
     <script>
         $('#uploadfile').on("change", function() {
-            $('#file').prepend('testtestetsetsetset');
             var file = this.files[0];
             var fr = new FileReader();
             fr.fileName = file.name;
@@ -58,7 +57,7 @@
                 html = '<input type="hidden" name="data" value="' + e.target.result.replace(/^.*,/, '') + '" >';
                 html += '<input type="hidden" name="mimetype" value="' + e.target.result.match(/^.*(?=;)/)[0] + '" >';
                 html += '<input type="hidden" name="filename" value="' + e.target.fileName + '" >';
-                $("#data").empty().append(html);
+                //$("#data").empty().append(html);
             }
             fr.readAsDataURL(file);
         });
