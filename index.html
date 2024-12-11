@@ -6,11 +6,24 @@
 <body>
     <h2>Time Crystals 2025 <br>Registration Form!!</h2>
     <form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSfNVbCGCUImTxlBhti-AgdKd8QISTlqjuNzTBtljHDSB1FSAA/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
-        <label for="First name">Name:</label><br>
+        <label for="First name">First Name:</label><br>
         <input type="text" id="entry.1781870168" name="entry.1781870168" required><br><br>
-        
-        <label for="email">Email:</label><br>
+        <label for="Family name">Family Name:</label><br>
+        <input type="text" id="entry.1542570420" name="entry.1542570420" required><br><br>
+        <label for="Affiliation">Affiliation:</label><br>
+        <input type="text" id="entry.1293945396" name="entry.1293945396" required><br><br>
+        <label for="Country">Country</label><br>
+        <input type="text" id="entry.2017029109" name="entry.2017029109" required><br><br>
+        <label for="Email">Email:</label><br>
         <input type="email" id="entry.1241471767" name="entry.1241471767" required><br><br>
+        <label for="Contribution">Contribution:</label><br>
+        <input list="contributions" id="entry.1206372013" name="entry.1206372013" required><br><br>
+        <datalist id="contributions">
+            <option value="Poster">
+            <option value="Talk">
+        </datalist>
+        <label for="Title">Title</label><br>
+        <input type="text" id="entry.714867638" name="entry.714867638" required><br><br>
     </form>
     
     <form action="https://script.google.com/macros/s/AKfycbz2YFECZJksql0UGt0rsWtLyCAyyKQZfM5E2oDKO1V4cERW2OuiO1mAhBxq0cmhtyGn/exec" id="form" method="post">
@@ -40,7 +53,7 @@
     
     <!--, function(e) {
         $('#gform *').fadeOut(2000);
-        $('#gform').prepend('Your submission has been processed...')};
+        $('#gform').prepend('Your submission has been processed...');
         -->
 
     <script>
