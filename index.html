@@ -52,23 +52,25 @@
 
     <script type="text/javascript"> var submitted=false; </script>
     
-    <!--<script>
+    <script type="text/javascript">
     $('#gform').on('submit', function(e) {
-        var theForm, theInput;
-        theForm = document.createElement('form');
-        theForm.action = "https://script.google.com/macros/s/AKfycbz2YFECZJksql0UGt0rsWtLyCAyyKQZfM5E2oDKO1V4cERW2OuiO1mAhBxq0cmhtyGn/exec";
-        theForm.method = 'post';
-        theInput = document.createElement('input');
-        theInput.type = 'file';
-        theInput.name = 'file';
-        theInput.value = $('#uploadfile');
-        theForm.appendChild(theInput);
-        document.getElementById('hidden_form_container').appendChild(theForm);
-        theForm.submit();
+        //var theForm, theInput;
+        //theForm = document.createElement('form');
+        //theForm.action = "https://script.google.com/macros/s/AKfycbz2YFECZJksql0UGt0rsWtLyCAyyKQZfM5E2oDKO1V4cERW2OuiO1mAhBxq0cmhtyGn/exec";
+        //theForm.method = 'post';
+        //theInput = document.createElement('input');
+        //theInput.type = 'file';
+        //theInput.name = 'file';
+        //theInput.value = $('#uploadfile');
+        //theForm.appendChild(theInput);
+        //document.getElementById('hidden_form_container').appendChild(theForm);
+        //theForm.submit();
+        $('#gform *').fadeOut(2000);
+        $('#gform').prepend('Your submission has been processed...');
     });
-    </script>-->
+    </script>
 
-    <script>
+    <!--<script>
         $('#uploadfile').on("change", function() {
             var file = this.files[0];
             var fr = new FileReader();
@@ -82,7 +84,7 @@
             }
             fr.readAsDataURL(file);
         });
-    </script>
+    </script>-->
 
 </body> 
 
