@@ -13,30 +13,33 @@
         <label for="email">Email:</label><br>
         <input type="email" id="entry.1241471767" name="entry.1241471767" required><br><br>
 
-        <input type="submit" value="Register" class="hidden">
+        <label for="file">Abstract</label><br>
+        <div id="data"></div>
+        <input id="uploadfile" type="file" accept=".pdf"/>
+
+        <input type="submit" value="Register">
     </form>
 
-    <form action="https://script.google.com/macros/s/AKfycbz2YFECZJksql0UGt0rsWtLyCAyyKQZfM5E2oDKO1V4cERW2OuiO1mAhBxq0cmhtyGn/exec" id="form" method="post" target="hidden_iframe">
+    <!--<form action="https://script.google.com/macros/s/AKfycbz2YFECZJksql0UGt0rsWtLyCAyyKQZfM5E2oDKO1V4cERW2OuiO1mAhBxq0cmhtyGn/exec" id="form" method="post" target="hidden_iframe">
         <label for="file">Abstract</label><br>
-        <!--<input id="file" type="file" accept=".pdf"/><br><br>-->
+        <input id="file" type="file" accept=".pdf"/><br><br>
         <div id="data"></div>
         <input name="file" id="uploadfile" type="file">
         <input id="submit" type="submit" value="Register">
-    </form>
+    </form>-->
 
     <script src="assets/js/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
 
-    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
+    <iframe src="https://script.google.com/macros/s/AKfycbz2YFECZJksql0UGt0rsWtLyCAyyKQZfM5E2oDKO1V4cERW2OuiO1mAhBxq0cmhtyGn/exec" name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
 
-    <script type="text/javascript">var submitted=false;</script>
     <script type="text/javascript">
-    $('#gform').on('submit', function(e) {
-        $('#gform *').fadeOut(2000);
-        $('#gform').prepend('Your submission has been processed...');
+        var submitted=false;
+        $('#gform').on('submit', function(e) {
+            $('#gform *').fadeOut(2000);
+            $('#gform').prepend('Your submission has been processed...');
         });
     </script>
-    <br><br>
     
     <script>
         $('#uploadfile').on("change", function() {
